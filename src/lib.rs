@@ -22,20 +22,20 @@ pub fn contour<F>(
 ) where
     F: FnMut(f64, f64, f64, f64, f64),
 {
-    let mut m1: isize = 0;
-    let mut m2: isize = 0;
-    let mut m3: isize = 0;
-    let mut case_value: isize = 0;
-    let mut dmin: f64 = 0.0;
-    let mut dmax: f64 = 0.0;
+    let mut m1: isize;
+    let mut m2: isize;
+    let mut m3: isize;
+    let mut case_value: isize;
+    let mut dmin: f64;
+    let mut dmax: f64;
     let mut x1: f64 = 0.0;
     let mut x2: f64 = 0.0;
     let mut y1: f64 = 0.0;
     let mut y2: f64 = 0.0;
-    let mut i: isize = 0;
-    let mut j: isize = 0;
-    let mut k: isize = 0;
-    let mut m: isize = 0;
+    let mut i: isize;
+    let mut j: isize;
+    let mut k: isize;
+    let mut m: isize;
     let mut h: [f64; 5] = [0.0; 5];
     let mut sh: [isize; 5] = [0; 5];
     let mut xh: [f64; 5] = [0.0; 5];
@@ -47,8 +47,8 @@ pub fn contour<F>(
         [[0, 3, 4], [1, 3, 1], [4, 3, 0]],
         [[9, 6, 7], [5, 2, 0], [8, 0, 0]],
     ];
-    let mut temp1: f64 = 0.;
-    let mut temp2: f64 = 0.;
+    let mut temp1: f64;
+    let mut temp2: f64;
     j = jub - 1;
     while j >= jlb {
         i = ilb;
